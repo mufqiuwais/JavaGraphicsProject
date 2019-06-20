@@ -52,6 +52,27 @@ public class WatashiJPanel extends JPanel{
         Shape drawQuadCurve23 = new QuadCurve2D.Float(512,365,512,365,520,307);
         Shape drawQuadCurve24 = new QuadCurve2D.Float(520,307,520,307,508,280);
         
+        
+        int xValues[] = {227,243,253,243};
+        int yValues[] = {240,250,240,222};
+        Polygon polygon1 = new Polygon();
+        polygon1.addPoint(227, 240);
+        polygon1.addPoint(243, 251);
+        polygon1.addPoint(254, 240);
+        polygon1.addPoint(243, 228);
+        Polygon polygon2 = new Polygon();
+        polygon2.addPoint(300, 150);
+        polygon2.addPoint(400, 68);
+        polygon2.addPoint(455, 70);
+        polygon2.addPoint(555, 150);
+        
+        
+        
+        graph.setPaint(Color.WHITE);
+        graph.setColor(Color.WHITE);
+        //graph.setStroke(new BasicStroke(1.3f));
+        graph.setStroke(new BasicStroke(4.0f));
+        graph.drawPolygon(polygon1);
         graph.setPaint(new Color(234, 37, 154));
         graph.setStroke(new BasicStroke(4.0f));
         graph.draw(drawQuadCurve18);
@@ -70,7 +91,6 @@ public class WatashiJPanel extends JPanel{
         graph.draw(drawQuadCurve8);
         graph.draw(drawQuadCurve7);
         graph.draw(drawQuadCurve6);
-        graph.draw(drawQuadCurve5);
         graph.draw(drawQuadCurve1);
         graph.draw(drawQuadCurve2);
         graph.draw(drawQuadCurve3);
@@ -87,8 +107,30 @@ public class WatashiJPanel extends JPanel{
         graph.draw(drawQuadCurve23);
         graph.draw(drawQuadCurve24);
         graph.setColor(Color.WHITE);
+        graph.fill(drawQuadCurve6);
+        graph.fill(drawQuadCurve7);
+        graph.fill(drawQuadCurve8);
+        graph.fill(drawQuadCurve10);
+        graph.fill(drawQuadCurve14);
+        graph.fill(drawQuadCurve16);
+        graph.fill(drawQuadCurve18);
+        graph.fill(drawQuadCurve4s3);
+        graph.fill(drawQuadCurve4s5);
+        graph.setPaint(new Color(234, 37, 154));
+        graph.setStroke(new BasicStroke(4.0f));
+        graph.draw(drawQuadCurve5);
+        
+        graph.setColor(Color.WHITE);
         graph.fill(drawQuadCurve1);
         graph.fill(drawQuadCurve2);
-        
+        graph.fill(drawQuadCurve3);
+        graph.fill(drawQuadCurve9s1);
+        graph.fill(drawQuadCurve9s2);
+        graph.fill(drawQuadCurve9s3);
+        graph.fill(drawQuadCurve9s4);
+        graph.setStroke(new BasicStroke(2.0f));
+        //graph.setRenderingHint(RenderingHints.KEY_ANTIALIASING, RenderingHints.VALUE_ANTIALIAS_OFF);
+        graph.fillPolygon(polygon1);
+        graph.fillPolygon(polygon2);
     }
 }

@@ -52,6 +52,8 @@ public class WatashiJPanel extends JPanel{
         Shape drawQuadCurve22 = new QuadCurve2D.Float(525,325,525,325,512,365);
         Shape drawQuadCurve23 = new QuadCurve2D.Float(512,365,512,365,520,307);
         Shape drawQuadCurve24 = new QuadCurve2D.Float(520,307,520,307,508,280);
+        Shape hairCurveLeft = new QuadCurve2D.Float(334,421,349,458,349,458);
+        Shape hairCurveRight = new QuadCurve2D.Float(484,421,464,458,464,458);
         
         //=================================End of Hair Line===============================
         
@@ -59,7 +61,57 @@ public class WatashiJPanel extends JPanel{
         Shape faceCurve1 = new QuadCurve2D.Float(298,342,308,411,388,470);
         Shape faceCurve2 = new QuadCurve2D.Float(388,470,408,488,428,470);
         Shape faceCurve3 = new QuadCurve2D.Float(428,470,505,411,512,365);
+        Shape leftEarCurve1 = new QuadCurve2D.Float(260,309,230,330,260,380);
+        Shape leftEarCurve2 = new QuadCurve2D.Float(260,380,292,410,318,400);
+        Shape rightEarCurve1 = new QuadCurve2D.Float(565,325,575,350,555,380);
+        Shape rightEarCurve2 = new QuadCurve2D.Float(555,380,540,400,500,400);
+        Shape leftNeck = new QuadCurve2D.Float(348,438,359,530,348,600);
+        Shape rightNeck = new QuadCurve2D.Float(465,440,460,530,465,600);
         //=================================End of Face Line===============================
+        
+        //=================================Shirt Line=====================================
+        Shape leftShirt1 = new QuadCurve2D.Float(352,508,309,509,289,600);
+        Shape leftShirt2 = new QuadCurve2D.Float(328,540,338,600,338,600);
+        Shape rightShirt1 = new QuadCurve2D.Float(464,508,504,508,540,600);
+        Shape rightShirt2 = new QuadCurve2D.Float(490,540,485,600,485,600);
+        //=================================End of Shirt Line==============================
+        
+        //==================================Eye Line======================================
+        //==================================Eye Brow======================================
+        Shape leftEyeBrow1 = new QuadCurve2D.Float(340,240,343,238,372,241);
+        Shape leftEyeBrow1s1 = new QuadCurve2D.Float(372,241,372,241,383,244);
+        Shape leftEyeBrow2 = new QuadCurve2D.Float(340,240,335,238,318,250);
+        Shape leftEyeBrow3 = new QuadCurve2D.Float(318,250,318,250,340,248);
+        Shape leftEyeBrow4 = new QuadCurve2D.Float(340,248,340,248,389,252);
+        Shape rightEyeBrow1 = new QuadCurve2D.Float(422,249,430,242,440,242);
+        Shape rightEyeBrow2 = new QuadCurve2D.Float(422,249,432,252,450,252);
+        //==================================End of Eye Brow===============================
+        //==================================Left Eye======================================
+        Shape leftEyeLid1 = new QuadCurve2D.Float(338, 282,362,278,370,295);
+        Shape leftEyeLid2 = new QuadCurve2D.Float(323,293,337,281,340,282);
+        Shape leftEyeLid2s1 = new QuadCurve2D.Float(323,287,330,290,340,282);
+        Shape leftEyeLid2s2 = new QuadCurve2D.Float(322,294,322,294,318,292);
+        Shape leftEyeLid3 = new QuadCurve2D.Float(338, 282,348, 280,370,287);
+        //==================================End of Left Eye===============================
+        //==================================Right Eye======================================
+        Shape rightEyeLid1 = new QuadCurve2D.Float(443, 295,457, 277,475,283);
+        Shape rightEyeLid2 = new QuadCurve2D.Float(489,293,477,281,473,281);
+        Shape rightEyeLid2s1 = new QuadCurve2D.Float(490,287,480,289,473,281);
+        Shape rightEyeLid2s2 = new QuadCurve2D.Float(490,294,489,293,494,292);
+        Shape rightEyeLid3 = new QuadCurve2D.Float(443, 287,463,280,473,281);
+        //==================================End of Right Eye===============================
+        //==================================End of Eye Line===============================
+        //==================================Nose Line=====================================
+        Shape noseLine1 = new QuadCurve2D.Float(403,300,406,310,406,344);
+        Shape noseLine2 = new QuadCurve2D.Float(406,366,406,366,406,371);
+        Shape noseLine3 = new QuadCurve2D.Float(406,371,406,371,403,371);
+        Shape noseLine4 = new QuadCurve2D.Float(394,369,394,366,400,357);
+        Shape noseLine5 = new QuadCurve2D.Float(415,369,415,369,415,369);
+        Shape noseLine6 = new QuadCurve2D.Float(400,357,400,360,406,366);
+        //==================================End of Nose Line==============================
+        //==================================Mouth Line====================================
+        Shape mouthLine = new QuadCurve2D.Float(380,420,408,408,436,420);
+        //==================================End of Mouth Line=============================
         
         
         int xValues[] = {227,243,253,243};
@@ -133,6 +185,10 @@ public class WatashiJPanel extends JPanel{
         //graph.setStroke(new BasicStroke(1.3f));
         graph.setStroke(new BasicStroke(4.0f));
         graph.drawPolygon(polygon1);
+        graph.setPaint(new Color(241, 80, 111));
+        graph.fill(faceCurve1);
+        graph.fill(faceCurve2);
+        graph.fill(faceCurve3);
         
         //=================Second Layer==================
         graph.setPaint(new Color(234, 37, 154));
@@ -186,12 +242,24 @@ public class WatashiJPanel extends JPanel{
         graph.draw(drawQuadCurve9s1);
         graph.setStroke(new BasicStroke(2.0f));
         graph.draw(drawQuadCurve14);
+        graph.draw(hairCurveLeft);
+        graph.draw(hairCurveRight);
+        graph.draw(leftShirt1);
+        graph.draw(leftShirt2);
+        graph.draw(rightShirt1);
+        graph.draw(rightShirt2);
         
         //===================Face Layer 1======================
         graph.setStroke(new BasicStroke(4.0f));
         graph.draw(faceCurve1);
         graph.draw(faceCurve2);
         graph.draw(faceCurve3);
+        graph.draw(leftEarCurve1);
+        graph.draw(leftEarCurve2);
+        graph.draw(rightEarCurve1);
+        graph.draw(rightEarCurve2);
+        graph.draw(leftNeck);
+        graph.draw(rightNeck);
         //===================End of Face Layer 1===============
         
         graph.setColor(Color.WHITE);
@@ -213,10 +281,63 @@ public class WatashiJPanel extends JPanel{
         graph.fillPolygon(polygon1);
         
         //=================FOURTH Layer==========================
+        graph.setColor(Color.WHITE);
+        graph.fillArc(340, 281, 18, 18, 0, 360);
+        graph.fillArc(455, 281, 18, 18, 0, 360);
         graph.setPaint(new Color(234, 37, 154));
         graph.setStroke(new BasicStroke(1.8f));
         graph.draw(drawQuadCurve2);
+        
         graph.setStroke(new BasicStroke(3.0f));
         graph.draw(drawQuadCurve5);
+        //=================Eye Layer=============================
+        graph.setStroke(new BasicStroke(2.2f));
+        //left eye
+        graph.drawArc(340, 281, 18, 18, 40, -270);
+       
+        //right eye
+        graph.drawArc(455, 281, 18, 18, 50, -260);
+        //left glass
+        graph.drawArc(297, 243, 100, 100, 40, -265);
+        graph.drawLine(397, 293, 420, 293);
+        //right glass
+        graph.drawArc(420, 243, 100, 100, 45, -263);
+        //left nose
+        graph.drawArc(394,366, 8, 8, -360, 180);
+        graph.draw(leftEyeBrow1);
+        graph.draw(leftEyeBrow1s1);
+        graph.draw(leftEyeBrow2);
+        graph.draw(leftEyeBrow3);
+        graph.draw(leftEyeBrow4);
+        graph.draw(rightEyeBrow1);
+        graph.draw(rightEyeBrow2);
+        graph.draw(leftEyeLid1);
+        graph.draw(leftEyeLid2s1);
+        graph.draw(leftEyeLid2s2);
+        graph.setStroke(new BasicStroke(4.0f));
+        graph.draw(leftEyeLid2);
+        graph.draw(leftEyeLid3);
+        graph.setStroke(new BasicStroke(2.2f));
+        graph.draw(rightEyeLid1);
+        graph.draw(rightEyeLid2s1);
+        graph.draw(rightEyeLid2s2);
+        graph.setStroke(new BasicStroke(4.0f));
+        graph.draw(rightEyeLid2);
+        graph.draw(rightEyeLid3);
+        //=================End of Eye Layer======================
+        //=================Nose Layer============================
+        graph.setStroke(new BasicStroke(2.2f));
+        graph.draw(noseLine1);
+        graph.draw(noseLine2);
+        graph.draw(noseLine3);
+        graph.draw(noseLine4);
+        graph.draw(noseLine6);
+        graph.setStroke(new BasicStroke(4.0f));
+        graph.draw(noseLine5);
+        //=================End of Nose Layer=====================
+        //=================Mouth Layer===========================
+        graph.setStroke(new BasicStroke(2.2f));
+        graph.draw(mouthLine);
+        //=================End of Mouth Line=====================
     }
 }

@@ -114,8 +114,6 @@ public class WatashiJPanel extends JPanel{
         //==================================End of Mouth Line===================
         
         
-        int xValues[] = {227,243,253,243};
-        int yValues[] = {240,250,240,222};
         Polygon polygon1 = new Polygon();
         polygon1.addPoint(227, 240);
         polygon1.addPoint(243, 251);
